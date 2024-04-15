@@ -20,19 +20,28 @@ Em seguida, inclua o diretório do pqxx no includepath caso esteja na IDE vscode
 ### Resolução das questões
 
 O código base realiza a exibição de tudo que esteja na tabela projeto
+
 <code>pqxx::result result = txn.exec("SELECT * FROM projeto");</code>
 
 Para a resolução das questões esse trecho do algoritmo deve ser substituido por respectivamente
 
 - Inserir uma atividade em algum projeto;
+
 <code>pqxx::result result = txn.exec("
     INSERT INTO atividade (codigo,descricao,projeto,data_inicio,data_fim) 
     values ("Valores para inserção")
     ");</code>
 - Atualizar o líder de algum projeto;
-<code></code>
+
+<code>pqxx::result result = txn.exec("
+    UPDATE projeto
+    SET responsavel = 'Novo líder'
+    WHERE codigo = 'ID do projeto'
+    ");</code>
 - Listar todos os projetos e suas atividades;
-<code></code>
 
-
-    
+<code>pqxx::result result = txn.exec("
+    SELECT * 
+FROM projeto pro INNER JOIN atividade ati
+ON ati.projeto = pro.codigo
+    ");</code>
