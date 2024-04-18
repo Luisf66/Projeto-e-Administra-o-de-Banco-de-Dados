@@ -5,7 +5,7 @@
 - Email: luis.felipe.santos.701@ufrn.edu.br  
 - [Link para tarefa-orm.md](https://github.com/Luisf66/Projeto-e-Administra-o-de-Banco-de-Dados/blob/main/tarefas/orm/tarefa-orm.md)
 
-# Uso do código
+# Uso do código C++
 
 Para utilizar o codigo disponibilizado no diretório script você primeiro deve realizar a instalação do pqxx com o comando 
 <code> sudo apt-get install libpqxx-dev</code>
